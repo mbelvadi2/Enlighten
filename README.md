@@ -2,8 +2,11 @@
 
 This python script is intended for customers of the solar panel equipment company, Enphase, who wish to use their Enlighten API accounts to harvest usage reports from their equipment.
 
-You can either run the python directly, or if you have Windows 10, you can download the pre-compiled executable.
+You can either run the python directly, or if you have Windows 10, you can download the pre-compiled executable (see the Release).
 There is nothing to install with that - you just create a folder to put it in, and put it there and run it directly.
+
+The executable seems to take a long time to start up (like maybe 10-20 seconds), but once the first window shows up everything works pretty fast.
+And you can run multiple reports one at a time without having to restart every time.
 
 There is some configuration you need to do with Enphase before you can use this application, read the details at:
 https://developer.enphase.com/docs/quickstart.html
