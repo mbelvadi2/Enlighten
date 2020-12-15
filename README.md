@@ -12,10 +12,11 @@ Then once you have all your credentials in place, you need to create an enlighte
 Note that the first line of the ini tells the program where to save the generated reports.
 
 The ini file is a simple plain text file with four "variables" separated from their values with a single space (remove all the comments below!):
-reportfolder  blahblah    #  a relative path from wherever the executable is - even on Windows, use forward slashes not backslashes
-account ######   # your enphase account #
-user_id blahblah  # find this in the enlighten web app under Account - API settings
-key blahblah   # this is the api key from the developer quickstart instructions
-
+--------<br/>
+reportfolder  blahblah    #  a relative path from wherever the executable is - even on Windows, use forward slashes not backslashes<br/>
+account ######   # your enphase account #<br/>
+user_id blahblah  # find this in the enlighten web app under Account - API settings<br/>
+key blahblah   # this is the api key from the developer quickstart instructions<br/>
+--------<br/>
 This is mostly just something I wrote for myself and decided to try sharing with the world here on Github.
 It only supports the kinds of reports that are relevant to me, a residential Enphase customer, but the code is very simple, so if some of those other reports (eg the "revenue-grade" ones) would be useful to you, just let me know or if you know python I'd be happy to let you contribute to this project.
