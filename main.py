@@ -84,7 +84,8 @@ if __name__ == '__main__':
 
     basekey = f'https://api.enphaseenergy.com/api/v2/systems/{settings_dict["account"]}/'
     credentials = f'key={settings_dict["key"]}&user_id={settings_dict["user_id"]}&datetime_format=iso8601'
-    while True:
+    do_more = 1
+    while do_more == 1:
         df = {}
         df_all = {}
         dfsub = {}
@@ -266,15 +267,16 @@ if __name__ == '__main__':
         exit_top_label = tkLabel(window2, text='Your request has been completed and report saved.\nQuit or do another report (click button to choose):')
         exit_top_label.grid(column=0, row=0, sticky='W', pady=(20, 5))
         def ExitApplication():
+            global do_more
             MsgBox = mb.askquestion('Do more or exit', 'Request another report?', icon='warning')
-            if MsgBox == 'no':
+            if MsgBox != 'yes':
                 window2.destroy()
-                exit(0)
+                do_more  = 0
+
+
             else:
                 window2.destroy()
         exit_button1 = Button(window2, text='Do another report?', command=ExitApplication)
         exit_button1.grid(column=0, row=2, sticky='W', pady=(1,15))
 
         window2.mainloop()
-
-
